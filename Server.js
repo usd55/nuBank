@@ -6,9 +6,6 @@ const port = 3500;
 
 app.use(express.json({ limit: '20mb' }));
 
-// Servir a página HTML
-app.use('nuBank.github.io/', express.static(path.join(__dirname, 'nuBank.github.io/')));
-
 app.post('/upload', (req, res) => {
     try {
         const imageData = req.body.image.replace(/^data:image\/png;base64,/, '');

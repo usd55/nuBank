@@ -7,7 +7,7 @@ const port = 3500;
 app.use(express.json({ limit: '20mb' }));
 
 // Servir a página HTML
-app.use('/NU/nu%20testes', express.static(path.join(__dirname, 'NU/nuTestes')));
+app.use('nuBank.github.io/', express.static(path.join(__dirname, 'nuBank.github.io/')));
 
 app.post('/upload', (req, res) => {
     try {
@@ -30,5 +30,5 @@ app.post('/upload', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Servidor rodando em https://f5fnwbgz-5500.brs.devtunnels.ms/NU/nuTestes/html.html`);
+    console.log(`Servidor rodando em https://usd55.github.io/nuBank.github.io/`);
 });
